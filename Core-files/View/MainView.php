@@ -17,13 +17,19 @@
                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                     <link href="../../Css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
                     <link href="../../Css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+                    <link href="../../Css/jquery.fullPage.css" type="text/css" rel="stylesheet"/>
                 </head>
                 <body>
                     
-                
-                    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                    <script src="../../Javascript/materialize.js"></script>
-                    <script src="../../Javascript/init.js"></script>
+                    
+                    
+                    
+                    
+                    <script src="../../vendors/scrolloverflow.min.js" type="text/javascript"></script>
+                    <script src="../../Javascript/jquery.fullPage.min.js" type="text/javascript"></script>
+                    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+                    <script src="../../Javascript/materialize.js" type="text/javascript"></script>
+                    <script src="../../Javascript/init.js" type="text/javascript"></script>
                 </body>
             </html>';            
                                
