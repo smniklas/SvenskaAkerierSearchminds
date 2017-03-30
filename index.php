@@ -49,30 +49,34 @@ require_once("Core-Files/Database/Database.php");
  
 //Database-Attribute
 
-$DatabaseAttribute;
+$DatabaseAttribute = new Database();
 
 //Session-Attribute
 
-$SessionAttribute;
+$SessionAttribute = new Session();
 
 //Model-Attribute
 
-$BrowserModelAttribute;
-$InfoModelAttribute;
-$RegModelAttribute;
-$SearchModelAttribute;
+$BrowserModelAttribute = new BrowserModel();
+$InfoModelAttribute = new InfoModel();
+$RegModelAttribute = new RegModel();
+$SearchModelAttribute = new SearchModel();
 
 //View-Attribute
 
-$BrowserViewAttribute;
-$InfoViewAttribute;
-$RegViewAttribute;
-$SearchViewAttribute;
+$BrowserViewAttribute = new BrowserView();
+$InfoViewAttribute = new InfoView();
+$RegViewAttribute = new RegView();
+$SearchViewAttribute = new SearchView();
 
 //Controller-Attribute
 
-$BrowserContAttribute;
-$InfoContAttribute;
-$RegContAttribute;
-$SearchContAttribute;
+$BrowserContAttribute = new BrowserController();
+$InfoContAttribute = new InfoController();
+$RegContAttribute = new RegController();
+$SearchContAttribute = new SearchController();
+
+//Main-Attribute
+
+$MainViewAttribute = new MainView();
 
