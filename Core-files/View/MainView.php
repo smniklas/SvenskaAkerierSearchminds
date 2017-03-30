@@ -1,6 +1,9 @@
 <?php
     class MainView{
-        public function __construct(){
-        }        
+        
+        public function screenRender(){
+            
+        }
+               
     }
 ?>
