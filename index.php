@@ -45,38 +45,50 @@ require_once("Core-Files/Database/Database.php");
  * it belongs.
  * Everything will be built on a LOOSE MVC standard with some splashes of PSR
  * standard.
+ * 
+ * These Attributes don't follow the naming convention as the rest since it's a
+ * very special file
 **/
  
 //Database-Attribute
 
-$DatabaseAttribute = new Database();
+$Database_Attribute = new Database();
 
 //Session-Attribute
 
-$SessionAttribute = new Session();
+$Session_Attribute = new Session();
 
 //Model-Attribute
 
-$BrowserModelAttribute = new BrowserModel();
-$InfoModelAttribute = new InfoModel();
-$RegModelAttribute = new RegModel();
-$SearchModelAttribute = new SearchModel();
+$Browser_Model_Attribute = new BrowserModel();
+
+$Info_Model_Attribute = new InfoModel();
+
+$Reg_Model_Attribute = new RegModel();
+
+$Search_Model_Attribute = new SearchModel();
 
 //View-Attribute
 
-$BrowserViewAttribute = new BrowserView();
-$InfoViewAttribute = new InfoView();
-$RegViewAttribute = new RegView();
-$SearchViewAttribute = new SearchView();
+$Browser_View_Attribute = new BrowserView();
+
+$Info_View_Attribute = new InfoView();
+
+$Reg_View_Attribute = new RegView();
+
+$Search_View_Attribute = new SearchView();
 
 //Controller-Attribute
 
-$BrowserContAttribute = new BrowserController();
-$InfoContAttribute = new InfoController();
-$RegContAttribute = new RegController();
-$SearchContAttribute = new SearchController();
+$Browser_Cont_Attribute = new BrowserController();
+
+$Info_Cont_Attribute = new InfoController();
+
+$Reg_Cont_Attribute = new RegController();
+
+$Search_Cont_Attribute = new SearchController();
 
 //Main-Attribute
 
-$MainViewAttribute = new MainView();
+$Main_View_Attribute = new MainView();
 
