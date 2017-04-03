@@ -4,10 +4,12 @@
  * It will hold the base template of the HTML 5 Code that will serve as the front page.
  * it will be synced with a helper function that will server as the flow and controller
  * to direct the right content to the right place, think of it as a router
+ * Added the ViewRouter
+ * ViewRouter have 3 simple task, keep track of 2 main view states and catch pages that can not be founds
 **/ 
     class MainView{
         
-        public function screenRender(){
+        public function screenRender($Search_View_Attribute){
             echo'
             <!DOCTYPE html>
             <html>
@@ -20,9 +22,9 @@
                     <link href="../../Css/jquery.fullPage.css" type="text/css" rel="stylesheet"/>
                 </head>
                 <body>
-                
-                
                     
+                    
+                    '.$Search_View_Attribute->htmlResponse().'
                     
                     
                     
@@ -34,6 +36,10 @@
                 </body>
             </html>';            
                                
+        }
+        
+        private function ViewRouter(){
+            
         }
                
     }

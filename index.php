@@ -94,4 +94,4 @@ $Main_View_Attribute = new MainView();
 
 //Initiation 
 
-$Main_View_Attribute->screenRender();
+$Main_View_Attribute->screenRender($Search_View_Attribute);
