@@ -17,6 +17,6 @@ Naming Convention
 
 ClassName
 methodName (Functions in Classes)
-propertyName(Varibales in Classes, can be called Attributes)
+$propertyName(Varibales in Classes, can be called Attributes)
 function_name (Functions outside classes)
 $variable_name (Varibles outside Classes)

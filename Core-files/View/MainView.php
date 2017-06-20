@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <?php
 /**
  * MainView is the holder class for one of the main functions of the website, screenRender.
@@ -9,7 +10,7 @@
 **/ 
     class MainView{
         
-        public function screenRender($Search_View_Attribute){
+        public function viewRender($Search_View_Attribute, $Browser_View_Attribute, $Info_View_Attribute, $Tell_View_Attribute, $Reg_View_Attribute){
             echo'
             <!DOCTYPE html>
             <html>
@@ -20,27 +21,43 @@
                     <link href="../../Css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
                     <link href="../../Css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
                     <link href="../../Css/jquery.fullPage.css" type="text/css" rel="stylesheet"/>
+                    <style>
+                       #map {
+                        height: 500px;
+                        width: 100%;
+                       }
+                    </style>
                 </head>
                 <body>
-                    
-                    
-                    '.$Search_View_Attribute->htmlResponse().'
-                    
-                    
-                    
+                    '.$this->viewRouter($Search_View_Attribute, $Browser_View_Attribute, $Info_View_Attribute, $Tell_View_Attribute, $Reg_View_Attribute).'
+                </body>
                     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
                     <script src="../../vendors/scrolloverflow.min.js" type="text/javascript"></script>
                     <script src="../../Javascript/jquery.fullPage.min.js" type="text/javascript"></script>
                     <script src="../../Javascript/materialize.js" type="text/javascript"></script>
-                    <script src="../../Javascript/init.js" type="text/javascript"></script>
-                </body>
+                    <script src="../../Javascript/init.js" type="text/javascript"></script>                
             </html>';            
                                
         }
         
-        private function ViewRouter(){
-            
+        private function viewRouter($Search, $Browser, $Info, $Tell, $Reg){
+            return ($this->tempFix($_SERVER['QUERY_STRING']) == 'Search='.$_SESSION["query"]) 
+            ? $Browser->htmlResponse() : ((strpos($_SERVER['QUERY_STRING'], "company") !== FALSE) 
+            ? $Info->htmlResponse() : (($_SERVER['QUERY_STRING'] == 'registrering') 
+            ? $Tell->htmlResponse() : (($_SERVER['QUERY_STRING'] == 'visselblasare') 
+            ? $Reg->htmlResponse() : $this->standardView($Search)))); 
         }
-               
+        private function standardView($main){
+            return $main->htmlResponse();
+        }
+        private function tempFix($string){
+            $string = str_replace('%C3%B6',"ö", $string);
+            $string = str_replace('%C3%A9',"é", $string);
+	        $string = str_replace('%C3%85',"Å", $string);
+            $string = str_replace('%C3%A5',"å", $string);
+            $string = str_replace('%C3%A5',"ä", $string);
+            $string = str_replace('%C3%B6',"ö", $string);
+            return $string;
+        }       
     }
 ?>

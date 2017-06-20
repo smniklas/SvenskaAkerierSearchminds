@@ -1,9 +1,81 @@
-.main-first-page{
-    background-color: #91CED7;
+html{
+    height:100%;
+    width:100%;
 }
-.main-sec-page{
-    background-color: #1BBC9B;
+.mapPos{
 }
-.main-third-page{
-    background-color: #CCEBC0;
+.vissle{
+    position:fixed;
+    bottom: 1%;
+    left: 1%;
+}
+.partner{
+    position: absolute;
+    bottom:1%;
+    left: 5%;
+}
+.bodym{
+    padding-top:0;
+    padding-bottom: 0;
+    background-image: url(../Images/background-main.jpg);
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+}
+.bodyb{
+    background-color: white;
+    /*background-color:#5EB1BF;*/
+}
+body:after{
+  content: "beta";
+  position: fixed;
+  width: 80px;
+  height: 25px;
+  background: #EE8E4A;
+  top: 7px;
+  left: -20px;
+  text-align: center;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  line-height: 27px;
+  -ms-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+.form-button{
+    width:100%;
+    height:auto;
+    text-align: center;
+}
+
+.main-search-div{
+    background-color: rgba(152, 196, 250, 0.7);
+}
+.card-color{
+    background-color: rgba(152, 196, 250, 0.8);
+}
+.info-color{
+    background-color: rgba(152, 196, 250, 0.9);
+}
+
+.content-card{
+    position: relative;
+}
+.logo-size{
+    position:absolute;
+    bottom:5;
+    right:5;
+    max-width: 80%!important;
+    max-height: 80%!important;
+}
+.top-logo{
+    position: absolute;
+    right:15;
+    top:10%;
+}
+@media only screen and (min-width: 960px){
+    .flow-text{font-size: 1.32rem!important;}
 }
